@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love to bake</title>
+    <style>
+      body {
+        background-image: linear-gradient(to top, #eebfaf 0%, #f4d0c3 100%);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: palevioletred;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        border: 1px solid palevioletred;
+        padding: 15px;
+        color: rgb(128, 128, 128);
+        margin: auto;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 40px;
+        max-width: 90%;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 14;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        opacity: 0.8;
+        max-width: 90%;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+        padding: 20px;
+        color: darkslategray;
+      }
+      button {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        display: block;
+        margin: 0 auto;
+        font-size: 22px;
+        line-height: 28px;
+        padding: 16px 24px;
+        border-radius: 10px;
+        background: palevioletred;
+        color: bisque;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      .moreInfo {
+        display: block;
+        margin: 20px 20px;
+        text-decoration: none;
+        padding: 20px 30px;
+      }
+      .moreInfo:hover {
+        text-decoration: underline;
+      }
+      button:hover {
+        opacity: 0.9;
+        background: bisque;
+        color: palevioletred;
+        cursor: pointer;
+      }
+      .content {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 25px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Baking is awesome</h1>
+      <h2>Especially cakes and cookies</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/027/835/original/1586302350498.jpg?1645546896"
+        alt="Baking"
+      />
+      <p>
+        "Baking is a method of preparing food that uses dry heat, typically in
+        an oven, but can also be done in hot ashes, or on hot stones. The most
+        common baked item is bread but many other types of foods are baked. Heat
+        is gradually transferred "from the surface of cakes, cookies, and breads
+        to their center. As heat travels through, it transforms batters and
+        doughs into baked goods and more with a firm dry crust and a softer
+        center."
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Baking"
+          target="_blank"
+          class="moreInfo"
+        >
+          More info from Wikipedia
+        </a>
+        <em>Subscribe to get great recipes</em>
+      </p>
+      <button>Get recipes</button>
+      <p>Coded by Marija Tržić Rastija</p>
+    </div>
+    <script>
+      function recipe() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let cake = prompt("What is your favourite cake?");
+        let age = prompt("How old are you?");
+
+        if (age < 13 || age > 75) {
+          alert(
+            "Thank you, " +
+              name +
+              "! By the time you get help with groceries we will send you the recipe for " +
+              cake
+          );
+        } else {
+          alert(
+            "Thank you, " +
+              name +
+              "! We will send you a recipe for " +
+              cake +
+              " by the time you get to the store you will have it 😋"
+          );
+        }
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", recipe);
+    </script>
+  </body>
+</html>
